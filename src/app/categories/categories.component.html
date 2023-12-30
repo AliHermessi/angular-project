@@ -1,0 +1,36 @@
+<table style="border: 1px solid black;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{ category.id }}</td>
+        <td><input type="text" #nameRef [value]="category.name"></td>
+        <td><textarea rows="4" cols="50" type="text" #descriptionRef [value]="category.description"></textarea></td>
+        <td>
+          <button (click)="saveChanges(nameRef.value, descriptionRef.value, category)" style="background-color: #5cb85c; padding: 8px 16px; border: none; border-radius: 4px; color: #fff; cursor: pointer; transition: background-color 0.3s ease;">
+            Save
+          </button>
+          <button (click)="deleteCategory(category.id)" style="background-color: #d9534f; padding: 8px 16px; border: none; border-radius: 4px; color: #fff; cursor: pointer; transition: background-color 0.3s ease;">
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="text" #newName placeholder="New Category Name"></td>
+        <td><textarea rows="4" cols="50" type="text" #newDescription placeholder="New Category Description"></textarea></td>
+        <td>
+            <button type="button" (click)="addNewCategory(newName.value,newDescription.value)" style="background-color: green; padding: 8px 16px; border: none; border-radius: 4px; color: #fff; cursor: pointer; transition: background-color 0.3s ease;">
+                Submit
+              </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

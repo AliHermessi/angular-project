@@ -1,0 +1,44 @@
+/* Style for the table */
+table {
+    width: 50%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for buttons */
+  button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    transition: opacity 0.3s ease;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Style for Save button */
+  button.save {
+    background-color: #5cb85c; /* Green color */
+  }
+  
+  /* Style for Delete button */
+  button.delete {
+    background-color: #d9534f; /* Red color */
+  }
+  
